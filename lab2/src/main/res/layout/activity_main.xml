@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="android.lab2.MainActivity">
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="100"
+        android:inputType="none"
+        android:textIsSelectable="true"/>
+
+    <TextView
+        android:id="@+id/resultValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="2"
+        android:textSize="25dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/squaring"
+        app:layout_constraintLeft_toRightOf="@+id/resultLabel"/>
+
+    <TextView
+        android:id="@+id/resultLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="Результат: "
+        android:textSize="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberRoot"
+        app:layout_constraintRight_toLeftOf="@+id/resultValue"/>
+
+    <Button
+        android:id="@+id/one"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="1"
+        app:layout_constraintTop_toBottomOf="@+id/input"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/two"
+        android:onClick="onNumberClick"/>
+
+    <Button
+        android:id="@+id/two"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="2"
+        app:layout_constraintTop_toBottomOf="@+id/input"
+        app:layout_constraintLeft_toRightOf="@+id/one"
+        app:layout_constraintRight_toLeftOf="@+id/three"
+        android:onClick="onNumberClick"/>
+
+    <Button
+        android:id="@+id/three"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="3"
+        app:layout_constraintTop_toBottomOf="@+id/input"
+        app:layout_constraintLeft_toRightOf="@+id/two"
+        app:layout_constraintRight_toLeftOf="@+id/result"
+        android:onClick="onNumberClick"/>
+
+    <Button
+        android:id="@+id/result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="="
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@+id/input"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/three"
+        android:onClick="onOperationClick"/>
+
+    <Button
+        android:id="@+id/four"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="4"
+        app:layout_constraintTop_toBottomOf="@+id/one"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/five"
+        android:onClick="onNumberClick"/>
+
+    <Button
+        android:id="@+id/five"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="5"
+        app:layout_constraintTop_toBottomOf="@+id/two"
+        app:layout_constraintLeft_toRightOf="@+id/four"
+        app:layout_constraintRight_toLeftOf="@+id/six"
+        android:onClick="onNumberClick"/>
+
+    <Button
+        android:id="@+id/six"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="6"
+        app:layout_constraintTop_toBottomOf="@+id/three"
+        app:layout_constraintLeft_toRightOf="@+id/five"
+        app:layout_constraintRight_toLeftOf="@+id/addition"
+        android:onClick="onNumberClick"/>
+
+    <Button
+        android:id="@+id/addition"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="+"
+        app:layout_constraintLeft_toRightOf="@+id/six"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result"
+        android:onClick="onOperationClick"/>
+
+    <Button
+        android:id="@+id/seven"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="7"
+        app:layout_constraintTop_toBottomOf="@+id/four"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/eight"
+        android:onClick="onNumberClick"/>
+
+    <Button
+        android:id="@+id/eight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="8"
+        app:layout_constraintTop_toBottomOf="@+id/five"
+        app:layout_constraintLeft_toRightOf="@+id/seven"
+        app:layout_constraintRight_toLeftOf="@+id/nine"
+        android:onClick="onNumberClick"/>
+
+    <Button
+        android:id="@+id/nine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="9"
+        app:layout_constraintTop_toBottomOf="@+id/six"
+        app:layout_constraintLeft_toRightOf="@+id/eight"
+        app:layout_constraintRight_toLeftOf="@+id/subtraction"
+        android:onClick="onNumberClick"/>
+
+    <Button
+        android:id="@+id/subtraction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="-"
+        app:layout_constraintTop_toBottomOf="@+id/addition"
+        app:layout_constraintLeft_toRightOf="@+id/nine"
+        app:layout_constraintRight_toRightOf="parent"
+        android:onClick="onOperationClick"/>
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="c"
+        app:layout_constraintTop_toBottomOf="@+id/seven"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/zero"
+        android:onClick="onOperationClick"/>
+
+    <Button
+        android:id="@+id/zero"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@+id/eight"
+        app:layout_constraintLeft_toRightOf="@+id/clear"
+        app:layout_constraintRight_toLeftOf="@+id/division"
+        android:onClick="onNumberClick"/>
+
+    <Button
+        android:id="@+id/division"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="/"
+        app:layout_constraintTop_toBottomOf="@+id/nine"
+        app:layout_constraintLeft_toRightOf="@+id/zero"
+        app:layout_constraintRight_toLeftOf="@+id/multiplication"
+        android:onClick="onOperationClick"/>
+
+    <Button
+        android:id="@+id/multiplication"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="*"
+        app:layout_constraintTop_toBottomOf="@+id/subtraction"
+        app:layout_constraintLeft_toRightOf="@+id/division"
+        app:layout_constraintRight_toRightOf="parent"
+        android:onClick="onOperationClick"/>
+
+    <Button
+        android:id="@+id/numberRoot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="Корень"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clear"
+        app:layout_constraintRight_toLeftOf="@+id/squaring"
+        android:onClick="onOperationClick"/>
+
+    <Button
+        android:id="@+id/squaring"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="Квадрат"
+        app:layout_constraintLeft_toRightOf="@+id/numberRoot"
+        app:layout_constraintTop_toBottomOf="@+id/zero"
+        app:layout_constraintRight_toRightOf="parent"
+        android:onClick="onOperationClick"/>
+
+</android.support.constraint.ConstraintLayout>
