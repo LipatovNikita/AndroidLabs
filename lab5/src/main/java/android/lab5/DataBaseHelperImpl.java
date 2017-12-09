@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DataBaseHelperImpl extends SQLiteOpenHelper implements DataBaseHalper {
+public class DataBaseHelperImpl extends SQLiteOpenHelper implements DataBaseHelper {
 
     public DataBaseHelperImpl(Context context) {
         super(context, "users", null, 1);
@@ -26,7 +26,7 @@ public class DataBaseHelperImpl extends SQLiteOpenHelper implements DataBaseHalp
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXIST Users");
+        db.execSQL("DROP TABLE IF EXISTS Users");
         onCreate(db);
     }
 
